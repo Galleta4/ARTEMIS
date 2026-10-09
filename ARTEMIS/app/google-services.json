@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "733448926679",
+    "project_id": "femmepower-d364a",
+    "storage_bucket": "femmepower-d364a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733448926679:android:178b1fa48552f3d8450792",
+        "android_client_info": {
+          "package_name": "com.example.femmepower"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB33CurgiH2X9jUPB7uAXYbQZj-bMyZaRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
