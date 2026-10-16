@@ -105,7 +105,6 @@ public class Principal extends AppCompatActivity {
 
     // 🔥 MÉTODO SELECCIONAR
     private void seleccionar(Button activo) {
-
         btninicio.setBackground(getDrawable(R.drawable.inactivo));
         btncontactos.setBackground(getDrawable(R.drawable.inactivo));
         btnmensaje.setBackground(getDrawable(R.drawable.inactivo));
