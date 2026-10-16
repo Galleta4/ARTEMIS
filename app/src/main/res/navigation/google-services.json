@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1048878005350",
+    "project_id": "artemis-88151",
+    "storage_bucket": "artemis-88151.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048878005350:android:3417846a4b5f290cb841a7",
+        "android_client_info": {
+          "package_name": "com.example.femmepower"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDubsfh56YDCovGR4Vsv19kBuHKY_0anNo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
