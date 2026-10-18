@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul_claro1"
+    tools:context=".Mensajes">
+
+    <!-- Título principal -->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Mensajes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#1B2A56"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/msjP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Opción 1: Usar mensaje predeterminado -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/msjP"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@xml/bg_card_rounded"
+        android:fontFamily="serif"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Usar mensaje predeterminado"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#1B2A56"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtMensajePers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+    <!-- Etiqueta Mensaje Personalizado -->
+
+    <!-- Caja de texto con Switch integrado -->
+    <TextView
+        android:id="@+id/txtMensajePers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="serif"
+        android:text="Mensaje personalizado"
+        android:textColor="#283593"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/smsContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/msjP" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/smsContainer"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@xml/bg_card_bordered"
+        app:layout_constraintBottom_toTopOf="@+id/txtIncluirSms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMensajePers">
+
+        <EditText
+            android:id="@+id/sms"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:hint="Agregar mensaje..."
+            android:inputType="textMultiLine"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            app:layout_constraintEnd_toStartOf="@+id/msj"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/msj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Subtítulo de incluir en SMS -->
+
+    <!-- Opción GPS -->
+
+    <TextView
+        android:id="@+id/txtIncluirSms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:fontFamily="serif"
+        android:text="Incluir en el sms"
+        android:textColor="#283593"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/gps"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/smsContainer" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/gps"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@xml/bg_card_rounded"
+        android:fontFamily="serif"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Ubicación GPS"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#1B2A56"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ritmoCardia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtIncluirSms" />
+
+    <!-- Opción Ritmo Cardiaco -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/ritmoCardia"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@xml/bg_card_rounded"
+        android:fontFamily="serif"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Ritmo cardíaco"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#1B2A56"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnVistaPrevia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gps" />
+
+    <!-- Botón Vista Previa -->
+    <Button
+        android:id="@+id/btnVistaPrevia"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@xml/bg_card_rounded"
+        app:backgroundTint="@null"
+        android:fontFamily="serif"
+        android:text="Vista previa del SMS"
+        android:textAllCaps="false"
+        android:textColor="#1B2A56"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ritmoCardia" />
+
+    <!-- Botón Guardar -->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@xml/bg_button_rounded"
+        app:backgroundTint="@null"
+        android:fontFamily="serif"
+        android:text="Guardar"
+        android:textAllCaps="false"
+        android:textColor="#1B2A56"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/barramenu1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVistaPrevia" />
+
+    <!-- Menú inferior (sin modificar) -->
+    <include
+        android:id="@+id/barramenu1"
+        layout="@layout/activity_barra"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

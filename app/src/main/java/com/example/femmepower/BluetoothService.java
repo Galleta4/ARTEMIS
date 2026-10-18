@@ -31,7 +31,6 @@ public class BluetoothService extends Service {
         Log.d(TAG, "🔥 Servicio de Bluetooth iniciado");
 
         new Thread(this::escucharBluetooth).start();
-
         return START_STICKY;
     }
 
@@ -66,8 +65,7 @@ public class BluetoothService extends Service {
                 }
 
                 Log.d(TAG, "Conectando al ESP32...");
-                socket = device.createRfcommSocketToServiceRecord(
-                        UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
+                socket = device.createRfcommSocketToServiceRecord( UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
 
                 adapter.cancelDiscovery();
                 socket.connect();
